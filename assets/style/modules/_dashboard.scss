@@ -1,0 +1,121 @@
+@import "./navbar_main_sidebar";
+@import "./navbar_main_content";
+$font_paint: #9ea1ae;
+$sidebar-paint: #1e1e2d;
+#Dash_board {
+  display: flex;
+  background: #e7e9f1;
+}
+
+h6 {
+  margin-left: 1rem;
+  color: #494b74;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+// ============================= TODOLIST  VARIAN  ========================
+.container_todo_value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .alert {
+    width: 50%;
+    .item_input {
+      width: 60%;
+    }
+    .btn-info {
+      display: inline-block;
+    }
+  }
+}
+// element id di beri pada  file script.js
+#new_id_varian {
+  margin-top: 30px;
+  .font-weight-bold {
+    position: relative;
+
+    span {
+      position: absolute;
+      left: 98%;
+      top: -4%;
+      font-weight: bolder;
+      color: red;
+      cursor: pointer;
+    }
+  }
+}
+// =============================Responsive Page ========================
+@media (max-width: 992px) {
+  // ============================================= Navigation user  =============================
+  .navbar {
+    .container-fluid {
+      padding: 0;
+      margin: 0;
+      flex-direction: column-reverse;
+      justify-content: start;
+      align-items: end;
+      flex-wrap: nowrap;
+
+      form {
+        width: 100%;
+        input {
+          width: 100%;
+        }
+        img.search_input {
+          left: 90%;
+        }
+      }
+
+      .menu_bar_profile {
+        ul.navbar-nav {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  // ============================================= Navigation sidebar =============================
+  .navigation {
+    transition: all 0.56s ease-in-out;
+    width: 80px !important;
+  }
+  .show_sidebars {
+    width: 300px !important;
+    ul h6,
+    .accordion span.title span {
+      transform: scale(0);
+      transition: all 0.56s ease-in-out;
+    }
+  }
+}
+
+.spesifikas_produk {
+  h6 {
+    margin-left: 0 !important;
+    border-bottom: 1px solid black;
+  }
+}
+
+@media (max-width: 552px) {
+  #add_ui_varian {
+    .col-auto {
+      width: 100%;
+    }
+  }
+  .status {
+    &-saldo,
+    &-total_order {
+      border-bottom: 1px solid lightblue;
+      margin-bottom: 10px;
+    }
+  }
+  .menu_bar_profile {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

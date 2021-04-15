@@ -1,0 +1,19 @@
+@mixin flex-box($JC, $AI, $FD) {
+  display: flex;
+  justify-content: $JC;
+  align-items: $AI;
+  flex-direction: $FD;
+}
+
+@mixin typografiHeading($Colors) {
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 38px;
+  color: $Colors;
+}
+
+@mixin typografi_paragraf($size_font, $color_font) {
+  font-size: $size_font;
+  color: $color_font;
+}
